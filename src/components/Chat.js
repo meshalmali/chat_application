@@ -71,26 +71,28 @@ function Chat() {
         </div>
       </div>
 
-      <div className="chat_body">
-        {messages.map((message) => (
-          <p
-            className={`chat_message ${
-              message.name === user.displayName && "chat_receiver"
-            }`}
-          >
-            <span
-              className={`chat_name ${
-                message.name === user.displayName && "chat_nameReceiver"
+      <div className="chat_body_parent">
+        <div className="chat_body">
+          {messages.map((message) => (
+            <p
+              className={`chat_message ${
+                message.name === user.displayName && "chat_receiver"
               }`}
             >
-              {message.name}
-            </span>
-            {message.message}
-            <span className="chat_timestamp">
-              {new Date(message.timestamp?.toDate()).toUTCString()}
-            </span>
-          </p>
-        ))}
+              <span
+                className={`chat_name ${
+                  message.name === user.displayName && "chat_nameReceiver"
+                }`}
+              >
+                {message.name}
+              </span>
+              {message.message}
+              <span className="chat_timestamp">
+                {new Date(message.timestamp?.toDate()).toUTCString()}
+              </span>
+            </p>
+          ))}
+        </div>
       </div>
 
       <div className="chat_footer">
