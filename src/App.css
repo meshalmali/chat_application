@@ -3,7 +3,6 @@
   place-items: center;
   background-color: rgb(180, 179, 179);
   height: 100vh;
-
 }
 
 .app_body {
@@ -12,4 +11,10 @@
   height: 90vh;
   width: 90vh;
   box-shadow: 10px 10px 8px #888888;
+}
+
+@media only screen and (max-width: 780px) {
+  .app {
+    background-color: white;
+  }
 }
