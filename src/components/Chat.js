@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Avatar } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+
 import { useParams } from "react-router-dom";
 import db from "../firebase";
 import { useStateValue } from "../context/StateProvider";
@@ -65,11 +64,11 @@ function Chat() {
           <div className="text-black p-3 shadow-custom font-semibold text-lg">
             {roomName}
           </div>
-          <div className="ml-auto">
+          {/* <div className="ml-auto">
             <IconButton>
               <MoreVertIcon />
             </IconButton>
-          </div>
+          </div> */}
         </div>
 
         <div

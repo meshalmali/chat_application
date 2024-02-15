@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ChatIcon from "@mui/icons-material/Chat";
-import DonutLargeIcon from "@mui/icons-material/DonutLarge";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import IconButton from "@mui/material/IconButton";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+
 import SidebarChat from "./SidebarChat";
 import db from "../firebase";
 import { useStateValue } from "../context/StateProvider";
-import Chat from "./Chat";
 
 function Sidebar({ showChat }) {
   const [rooms, setRooms] = useState([]);
@@ -30,7 +25,7 @@ function Sidebar({ showChat }) {
   }, []);
 
   return (
-    <div className="flex w-screen h-screen">
+    <div className="flex w-screen lg:w-full h-screen">
       <div
         className={`${
           showChat ? "w-1/3" : "w-screen"
